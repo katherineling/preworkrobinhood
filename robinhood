@@ -1,0 +1,74 @@
+points = [(4, 5), (-0, 2), (4, 7), (1, -3), (3, -2), (4, 5), (3, 2), (5, 7), (-5, 7), (2, 2), (-4, 5), (0, -2), (-4, 7), (-1, 3), (-3, 2), (-4, -5), (-3, 2), (5, 7), (5, 7), (2, 2), (9, 9), (-8, -9)]
+# 1. Robin Hood is famous for hitting an arrow with another arrow. Did you get it?
+
+number_of_shots = len(points) 
+print(number_of_shots)
+
+unique_points = set(points)
+print(unique_points)
+
+number_of_unique_points = len(unique_points)
+print(number_of_unique_points)
+
+duplicates = number_of_shots - number_of_unique_points
+print(duplicates)
+
+# 2. Calculate how many arrows have fallen in each quadrant.
+
+for x, y in points:
+    if (x > 0 and y > 0): 
+        print ("lies in First quadrant") 
+  
+    elif (x < 0 and y > 0): 
+        print ("lies in Second quadrant") 
+          
+    elif (x < 0 and y < 0): 
+        print ("lies in Third quadrant") 
+      
+    elif (x > 0 and y < 0): 
+        print ("lies in Fourth quadrant") 
+          
+    elif (x == 0 and y == 0): 
+        print ("lies at origin")   
+    else: 
+        print ("on border") 
+        
+
+        ##  9 lie on 1st quadrant,  6 in 2nd quadrant, 2 in 3rd quadrant, 2 in 4th quadrant
+        
+# 3. Find the point closest to the center. Calculate its distance to the center
+# Defining a function that calculates the distance to the center can help.
+
+points = [(4, 5), (-0, 2), (4, 7), (1, -3), (3, -2), (4, 5),
+          (3, 2), (5, 7), (-5, 7), (2, 2), (-4, 5), (0, -2),
+          (-4, 7), (-1, 3), (-3, 2), (-4, -5), (-3, 2),
+          (5, 7), (5, 7), (2, 2), (9, 9), (-8, -9)]
+
+
+for x,y in points:
+    if (x > 0 and y > 0): 
+        print ((x**2 + y**2)**.5)
+  
+    elif (x < 0 and y > 0): 
+        print ((x**2 + y**2)**.5) 
+          
+    elif (x < 0 and y < 0): 
+        print ((x**2 + y**2)**.5) 
+      
+    elif (x > 0 and y < 0): 
+        print ((x**2 + y**2)**.5) 
+        
+    elif (x == 0 and y == 0): 
+        print ("0")   
+    
+    elif (x == 0 and y > 0): 
+        print (y)   
+    
+    elif (x == 0 and y < 0): 
+        print (y)
+        
+    else:
+        print (x)
+        
+
+        ##Point #2 (0,2) and #12 (0,-2) are both closest to the center        
